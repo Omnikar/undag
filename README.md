@@ -240,6 +240,7 @@ commands which will generate the program repository.
 | `println <arg>` | Print the value given by `arg` to stdout, with a trailing newling. |
 | `inpln <var>` | Read a line from stdin, trimming the trailing newline, and store the result in `var`. |
 | `concat <var> <a> <b>` | Concatenate the string representations of `a` and `b`, storing the result in `var`. |
+| `chars <var> <string>` | Separate `string` into characters, create a table with variables that store the characters whose names correspond to the character indices and a `len` variable with the number of characters, and store the result in `var`.
 | `eq <var> <a> <b>` | Set `var` to 1 if `a` and `b` are equal, and 0 otherwise. |
 | `gt <var> <a> <b>` | Set `var` to 1 if `a` is greater than `b`, and 0 otherwise. |
 | `add <var> <a> <b>` | Add `a` and `b`, storing the result in `var`. |
