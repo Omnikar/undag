@@ -30,8 +30,8 @@ arguments. The value of a variable can be used as an argument by prefixing
 the variable name with `$` (`$foo`). Note, however, that unlike with shell
 commands, variable access via `$` cannot be performed within a string
 argument to interpolate the value of the variable into the string
-(`"foo $bar baz"`); variable accesses must be standalone arguments. As
-mentioned, even numerical arguments are interpreted as strings by default;
+(INVALID: `"foo $bar baz"`); variable accesses must be standalone arguments.
+As mentioned, even numerical arguments are interpreted as strings by default;
 however, variables can be set to numerical values by prefixing the number
 with `#` (`#16`). Currently, only integers are supported.
 
