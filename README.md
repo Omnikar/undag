@@ -218,7 +218,19 @@ git tag _end
 ```
 
 ## Tables
-Currently undocumented.
+A table can be considered a scope for variables. There is one global table
+which is where all variables are stored by default. However, a variable can
+itself store a sub-table which holds its own variables. The variables in a
+sub-table can be accessed in multiple ways. The first way is by joining the
+variable's name in its sub-table to the name of the sub-table, separated with
+`/`, and accessing it as a variable. For example, the variable name `foo/a`
+corresponds to the variable named `a` in the table `foo`. The second way to
+access a variable in a sub-table is by "entering" the sub-table. This shifts
+the current scope to the sub-table, so that operations that would otherwise
+operate on the global table instead operate on the subtable. For example,
+`enter foo` will cause the variable name `a` to represent the variable named
+`a` in the sub-table `foo`, rather than in the global table. The `exit`
+instruction will shift from the current sub-table into its parent table.
 
 ## Examples
 More example programs (without explanations) can be found in the
