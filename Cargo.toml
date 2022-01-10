@@ -1,0 +1,13 @@
+[package]
+name = "undag"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+git = { package = "git2", version = "0.13" }
+anyhow = "1.0"
+hashbrown = "0.11"
+rand = "0.8"
+shellwords = "1.1"
