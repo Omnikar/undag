@@ -20,7 +20,7 @@ impl std::str::FromStr for Val {
             .map(str::parse::<i64>)
             .map(|res| res.map(Self::Int))
             .unwrap_or_else(|| Ok(Self::Str(s.to_owned())))
-            .map_err(Into::into)
+            .map_err(From::from)
     }
 }
 
